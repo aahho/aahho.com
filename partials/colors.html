@@ -1,0 +1,8 @@
+<div ng-controller="ColorControllers" class="container containerPage">
+   <h2>Colors We Love</h2>
+    <div class="swatch">
+        <ul>
+            <li class="fub-strong" style="background-color:{{  c.color }} " ng-repeat="c in colors"><span style="color:{{ c.color }}">{{  c.color }}</span></li>
+        </ul>
+    </div>
+</div>
