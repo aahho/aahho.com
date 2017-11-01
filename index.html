@@ -4,100 +4,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title ng-bind="$state.current.data.pageTitle"></title>
-    
-
     <title>Aahho - Digital Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Julius+Sans+One|Poiret+One|Raleway" rel="stylesheet">
-    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
     <!-- FIREBASE JS LINK BELOW-->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-
     <link rel="icon" type="image/png" href="favicon.png" />
     
 </head>
 
 <body>
-
-
-    
-        <div class="container-fluid" id="wrapper">
-            <div class="row">
-                <div ng-include="'navigation.partial.html'"></div>
-                
-                
-                <main class="col-xs-12 col-sm-8 offset-sm-4 col-lg-9 offset-lg-3 col-xl-10 offset-xl-2 ">
-                   
-                    
-                    <section class="row">
-                        <div ui-view id = "app-container" class="col-sm-12">
-                            
-                            
-                        </div>
-                    </section>
-                </main>
-            </div>
+    <div class="container-fluid" id="wrapper">
+        <div class="row">
+            <div ng-include="'views/sidebar.html'"></div>
+            <main class="col-xs-12 col-sm-8 offset-sm-4 col-lg-9 offset-lg-3 col-xl-10 offset-xl-2 ">
+                <section class="row">
+                    <div ui-view id = "app-container" class="col-sm-12">    
+                    </div>
+                </section>
+            </main>
         </div>
+    </div>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
     <script src="js/angular-simple-slideshow.js"></script>     
     <script src="js/common/modules.js"></script> 
-   <script src="js/common/filters.js"></script> 
-   <script src="js/common/services.js"></script> 
-   <script src="js/common/properties.js"></script> 
-   <script src="js/common/directives.js"></script>
-   <script src="js/common/controller.js"></script> 
-   <script src="main.js"></script>
-    
-<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="js/common/filters.js"></script> 
+    <script src="js/common/services.js"></script> 
+    <script src="js/common/properties.js"></script> 
+    <script src="js/common/directives.js"></script>
+    <script src="js/common/controller.js"></script> 
+    <script src="main.js"></script>
+        
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase-auth.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase-database.js"></script>
 
-<script>
-var config = {
+    <script>
+        var config = {
             apiKey: "AIzaSyCooghpPBXl9C-mSOo995EHjxoRvhfUhi8",
             authDomain: "aahho-f4bd5.firebaseapp.com",
             databaseURL: "https://aahho-f4bd5.firebaseio.com",
             projectId: "aahho-f4bd5",
             storageBucket: "aahho-f4bd5.appspot.com",
             messagingSenderId: "285530262678"
-          };
-          firebase.initializeApp(config);
-</script>
+        };
+        firebase.initializeApp(config);
+    </script>
 
 
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-<!--Start of Zendesk Chat Script-->
-<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-$.src="https://v2.zopim.com/?5EC6od3JFK28aB8rFlgP7vH1XsjyfGPQ";z.t=+new Date;$.
-type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-</script>
-<!--End of Zendesk Chat Script-->
+    <!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="https://v2.zopim.com/?5EC6od3JFK28aB8rFlgP7vH1XsjyfGPQ";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zendesk Chat Script-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26826257-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26826257-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-26826257-1');
-</script>
+    gtag('config', 'UA-26826257-1');
+    </script>
 
 </body>
 
