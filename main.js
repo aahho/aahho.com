@@ -6,7 +6,8 @@
 		angular.module('ngSeedApp', [
 			'ui.router',
 			'ngSeedApp.controllers',
-			'simple-slideshow'
+			'simple-slideshow',
+			'firebase'
 		]);
 
 	aahhoWeb.run(['$rootScope', '$state', '$stateParams',

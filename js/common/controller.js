@@ -55,9 +55,27 @@ aahhoControllers.controller('aboutController', [
 ]);
 
 aahhoControllers.controller('contactController', [
-	'$scope',
-	function($scope) {
+	'$scope','$firebaseArray',
+	function($scope, $firebaseArray) {
 		$scope.title = "Welcome";
+
+
+		$scope.submitContact = function(contact) {
+			var database = firebase.database();
+    		var ref = firebase.database().ref('/contacts');
+     		var object =  {
+            'contactName' : contact.name,
+            'contactEmail' : contact.email,
+            'contactPhone' : contact.phone
+        }
+
+			 const promise = ref.push(object);
+			  promise.catch(e => console.log(e.message));
+          	  promise.then(function() {
+                console.log("done");
+                
+            })
+		}
 	}
 ]);
 
