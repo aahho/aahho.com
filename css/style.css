@@ -286,7 +286,7 @@ p {
 
 #menu-toggle {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   right: 1rem; }
 
 .sidebar a:focus, .sidebar a:visited, .sidebar a:hover, .sidebar a:active {
@@ -304,8 +304,9 @@ p {
     padding-bottom: 0px;
     margin-bottom: 1rem; }
 
-  #menu-toggle {
-    background-color: #000; } }
+  /* #menu-toggle {
+    background-color: #000; }  */
+  }
 @media screen and (min-width: 576px) {
   #wrapper.toggled .sidebar-nav {
     display: block; }
@@ -641,7 +642,7 @@ input[type=checkbox]:checked + label {
 }
 #slideshow-wrap .slide-container img {
   width: 100%;
-  height:500px;
+  /* height:500px; */
 }
 #slideshow-wrap .slide-image-wrap {
   width: 80%;
@@ -677,6 +678,8 @@ input[type=checkbox]:checked + label {
   transition:all 0.5s linear; 
   animation: 0.2s zoomIn ease-in;
   animation-fill-mode: forwards;
+  max-width: 100%;
+  height: auto;
 }
 
 @keyframes zoomIn {
@@ -732,3 +735,32 @@ input[type=checkbox]:checked + label {
   filter:grayscale(0%);
 }
 
+@media screen and (max-width: 576px) {
+  .sidebar {
+    animation: 0.3s slideInLeft ease-in;
+    animation-fill-mode: none;
+    transform: none;
+  }
+  .sm-100 {
+    /* width: 100%; */
+  }
+  .sm-hide {
+    display: none;
+  }
+
+  .sidebar-style-1 {
+    width: 100vw;
+  }
+  .maxheight {
+    height: initial;
+  }
+}
+
+.sidebar-sm {
+  position: fixed;
+  margin:0;
+}
+
+.sidebar-sm .sidebar-nav {
+  display: block !important;
+}
